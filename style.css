@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --color-faint: rgba(255,255,255,0.6);
+    --color-white: rgba(255,255,255,0.8);
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/imgs/winBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    width: 3rem;
+}
+
+.mainHeading{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    margin-bottom: 0.7rem;
+}
+
+.text{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+i{
+    cursor: pointer;
+}
+
+.off{
+    font-size: 2rem;
+}
+
+.resumePage{
+    max-width: 1100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    color: var(--color-white);
+    padding: 0.6rem 1.8rem;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resumePage .searchBx{
+    background-color: rgba(255,255,255,0.3);
+    padding: 0.6rem;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.resumePage .searchBx input{
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.experienceBx, .educationBx{
+    display: flex;
+    gap: 1rem;
+}
+
+.educationBx h4{
+    font-weight: 400;
+}
+
+.resumePage .educationBxs .educationBx{
+    background-color: rgba(255,255,255,0.3);
+    padding: 0.8rem;
+    align-items: center;
+}
+
+.resumePage .experienceBxs .experienceBx:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.resumePage .educationBxs .educationBx:not(:last-child){
+    margin-bottom: 0.7rem;
+}
+
+.resumePage .experienceBxs .experienceBx .rightBx{
+    display: flex   ;
+}
+
+.resumePage .experienceBxs .experienceBx .rightBx .text{
+    color: var(--color-faint);
+    font-size: 0.8rem;
+}
+
+.resumePage .skillsBx{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+}
+
+.resumePage .skillsBx .skillBx{
+    /* flex: 0 0 47%; */
+    width: 47%;
+}
+
+.resumePage .skillsBx .skillBx .accordion{
+    background-color: rgba(255,255,255,0.25);
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.resumePage .userBx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.7rem 4rem;
+}
+
+.resumePage .userBx .leftBx{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.resumePage .userBx .leftBx .imgBx{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.resumePage .userBx .leftBx .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(max-width: 991px){
+    .resumePage .skillsBx .skillBx{
+        width: 100%;
+    }
+}
